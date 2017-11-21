@@ -1,1 +1,9 @@
 <!-- Should display the task's details (content, date of creation, etc.) and a back-link to the index page. -->
+
+<h2><%= @task.name %></h2>
+<p><%= @task.description %></p>
+<%= link_to "List", tasks_path %>
+<%= link_to "Delete", task_path(@task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+<%= link_to "Edit", edit_task_path(@task) %>

@@ -1,1 +1,7 @@
 <!-- Should include a form to create or update a task. -->
+<%= render 'form' %>
+<%= link_to "Cancel", tasks_path %>
+<%= link_to "Delete", task_path(@task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+
